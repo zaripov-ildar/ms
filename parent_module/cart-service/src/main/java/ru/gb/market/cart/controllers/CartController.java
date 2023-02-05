@@ -24,5 +24,10 @@ public class CartController {
         cartService.addToCart(productId);
     }
 
+    @GetMapping("/clear")
+    public void clear(){
+        cartService.getCurrentCart().clear();
+    }
+
 
 }
